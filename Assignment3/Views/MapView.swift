@@ -10,11 +10,11 @@ import MapKit
 
 struct MapView: View {
     
+    @StateObject private var viewModel = MapViewModel()
+    
     @State var firstStop : String = ""
     @State var secondStop : String = ""
     @State var finalDestination : String = ""
-    
-    @State var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 43.6532, longitude: -79.3832), span: MKCoordinateSpan(latitudeDelta: 0.5, longitudeDelta: 0.5))
     
     var body: some View {
         
@@ -30,11 +30,15 @@ struct MapView: View {
                     
                 }, label: {
                     Text("Go!")
-                }).padding(10)
-            }.padding(10)
+                }).padding(5)
+            }.padding(5)
             
-            Map(coordinateRegion: $region)
+            Map(coordinateRegion: $viewModel.region, showsUserLocation: true)
                 .padding(10)
+                .accentColor(Color(.systemPink))
+                .onAppear {
+                    viewModel.checkIfLocationServicesIsEnabled()
+                }
             
         }
         

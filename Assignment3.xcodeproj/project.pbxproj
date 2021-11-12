@@ -16,6 +16,7 @@
 		C3C291E6273EF9B300A95F95 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C291E5273EF9B300A95F95 /* MapView.swift */; };
 		C3C291E9273EFAFF00A95F95 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3C291E8273EFAFF00A95F95 /* MapKit.framework */; };
 		C3C291EB273EFB0700A95F95 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3C291EA273EFB0700A95F95 /* CoreLocation.framework */; };
+		C3C291EE273F14CB00A95F95 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C291ED273F14CB00A95F95 /* MapViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		C3C291E5273EF9B300A95F95 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		C3C291E8273EFAFF00A95F95 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		C3C291EA273EFB0700A95F95 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		C3C291ED273F14CB00A95F95 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 		C3C291CF273EF88A00A95F95 /* Assignment3 */ = {
 			isa = PBXGroup;
 			children = (
+				C3C291EC273F14C000A95F95 /* Models */,
 				C3C291E4273EF9A300A95F95 /* Views */,
 				C3C291D0273EF88A00A95F95 /* AppDelegate.swift */,
 				C3C291D2273EF88A00A95F95 /* SceneDelegate.swift */,
@@ -100,6 +103,14 @@
 				C3C291E8273EFAFF00A95F95 /* MapKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C3C291EC273F14C000A95F95 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C3C291ED273F14CB00A95F95 /* MapViewModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -173,6 +184,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3C291D1273EF88A00A95F95 /* AppDelegate.swift in Sources */,
+				C3C291EE273F14CB00A95F95 /* MapViewModel.swift in Sources */,
 				C3C291E6273EF9B300A95F95 /* MapView.swift in Sources */,
 				C3C291D3273EF88A00A95F95 /* SceneDelegate.swift in Sources */,
 				C3C291D5273EF88A00A95F95 /* ContentView.swift in Sources */,
