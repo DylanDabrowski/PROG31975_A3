@@ -9,8 +9,16 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        
+        NavigationView {
+            VStack {
+                Text("Map Navigation Using SwiftUI")
+                    .padding(50)
+                NavigationLink(destination: MapView()) {
+                    Text("Begin")
+                }.padding(50)
+            }
+        }
     }
 }
 
