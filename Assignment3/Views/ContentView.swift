@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+// NOTE: When running wait a few seconds after pressing "Locate" before pressing "Route" as I have not implemented async yet.
+
 struct ContentView: View {
     var body: some View {
         

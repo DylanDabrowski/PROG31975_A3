@@ -6,6 +6,7 @@
 //
 
 import MapKit
+
 enum MapDetails {
     static let startingLocation = CLLocationCoordinate2D(latitude: 43.6532, longitude: -79.3832)
     static let defaultSpan = MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
@@ -14,6 +15,7 @@ enum MapDetails {
 final class MapViewModel : NSObject, ObservableObject, CLLocationManagerDelegate {
     
     @Published var region = MKCoordinateRegion(center: MapDetails.startingLocation, span: MapDetails.defaultSpan)
+    @Published var userLocation = MapDetails.startingLocation
     
     var locationManager : CLLocationManager?
     
@@ -39,6 +41,8 @@ final class MapViewModel : NSObject, ObservableObject, CLLocationManagerDelegate
             print("You have denied this permission, go into setting to fix this.")
         case .authorizedAlways, .authorizedWhenInUse:
             region = MKCoordinateRegion(center: locationManager.location!.coordinate, span: MapDetails.defaultSpan)
+            // The force unwrapping causes it to crash sometimes but work other times, im unsure why and how to fix it, but if you attempt running it 2-3 times it ends up working.
+            userLocation = locationManager.location!.coordinate
         @unknown default:
             break
         }
